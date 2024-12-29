@@ -32286,7 +32286,7 @@ A.BJ.prototype={
 R(a){var s=null
 return new A.rO(B.Dm,"Distorted Turtle",A.a8K(s,A.aaQ(B.M,s,s,B.Cz),!0),!1,s)}}
 A.jm.prototype={
-R(a){return A.a8s(A.a78(A.jG("Page 1")),A.a7i(A.b([new A.mO(A.b(["assets/images/1.png","assets/images/2.png","assets/images/3.png"],t.s),B.eO,null),A.Zd(null,20,null),A.qI(A.jG("Go to Page 2"),new A.VE(a)),A.qI(A.jG("Go to Page 3"),new A.VF(a))],t.l),B.bv))}}
+R(a){return A.a8s(A.a78(A.jG("Page 1")),A.a7i(A.b([new A.mO(A.b(["images/1.png","images/2.png","images/3.png"],t.s),B.eO,null),A.Zd(null,20,null),A.qI(A.jG("Go to Page 2"),new A.VE(a)),A.qI(A.jG("Go to Page 3"),new A.VF(a))],t.l),B.bv))}}
 A.VE.prototype={
 $0(){var s=A.nr(new A.VD(),null,t.z)
 A.jk(this.a).i5(s)},
@@ -32302,7 +32302,7 @@ A.VC.prototype={
 $1(a){return new A.lo(null)},
 $S:79}
 A.ln.prototype={
-R(a){return A.a8s(A.a78(A.jG("Page 2")),A.a7i(A.b([new A.mO(A.b(["assets/images/4.png","assets/images/5.png","assets/images/6.png"],t.s),B.eO,null),A.Zd(null,20,null),A.qI(A.jG("Go to Page 1"),new A.VI(a)),A.qI(A.jG("Go to Page 3"),new A.VJ(a))],t.l),B.bv))}}
+R(a){return A.a8s(A.a78(A.jG("Page 2")),A.a7i(A.b([new A.mO(A.b(["images/4.png","images/5.png","images/6.png"],t.s),B.eO,null),A.Zd(null,20,null),A.qI(A.jG("Go to Page 1"),new A.VI(a)),A.qI(A.jG("Go to Page 3"),new A.VJ(a))],t.l),B.bv))}}
 A.VI.prototype={
 $0(){var s=A.nr(new A.VH(),null,t.z)
 A.jk(this.a).i5(s)},
@@ -32318,7 +32318,7 @@ A.VG.prototype={
 $1(a){return new A.lo(null)},
 $S:79}
 A.lo.prototype={
-R(a){return A.a8s(A.a78(A.jG("Page 3")),A.a7i(A.b([new A.mO(A.b(["assets/images/7.png","assets/images/8.png","assets/images/9.png"],t.s),B.eO,null),A.Zd(null,20,null),A.qI(A.jG("Go to Page 1"),new A.VM(a)),A.qI(A.jG("Go to Page 2"),new A.VN(a))],t.l),B.bv))}}
+R(a){return A.a8s(A.a78(A.jG("Page 3")),A.a7i(A.b([new A.mO(A.b(["images/7.png","images/8.png","images/9.png"],t.s),B.eO,null),A.Zd(null,20,null),A.qI(A.jG("Go to Page 1"),new A.VM(a)),A.qI(A.jG("Go to Page 2"),new A.VN(a))],t.l),B.bv))}}
 A.VM.prototype={
 $0(){var s=A.nr(new A.VL(),null,t.z)
 A.jk(this.a).i5(s)},

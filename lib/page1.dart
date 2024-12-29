@@ -16,9 +16,9 @@ class Page1 extends StatelessWidget {
         children: [
           CarouselWidget(
             imageUrls: [
-              'assets/images/1.png',
-              'assets/images/2.png',
-              'assets/images/3.png',
+              'images/1.png',
+              'images/2.png',
+              'images/3.png',
   ],
   boxFit: BoxFit.fill,
 ),
