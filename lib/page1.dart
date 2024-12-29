@@ -20,6 +20,7 @@ class Page1 extends StatelessWidget {
               'https://imgs.search.brave.com/1Nr-E6qd_0S2EZHtxN56nYFB0QwCeV7qO8kczGylFDE/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jb250/ZXVkby5pbWd1b2wu/Y29tLmJyL2MvZW50/cmV0ZW5pbWVudG8v/YzIvMjAyNC8xMi8x/OC9icmVubm8tLW1h/dGhldXMtbm8tY2xp/cGUtZGUtZGVzY2Vy/LXByYS1iYy0xNzM0/NTI2OTgzNTkwX3Yy/XzYwMHg2MDAucG5n',
               'https://gifdb.com/images/high/dame-tu-cosita-alien-dance-p9avas05fsklg33m.webp',
             ],
+            boxFit: BoxFit.cover,  // You can change this value as per your needs
           ),
           SizedBox(height: 20),
           ElevatedButton(
