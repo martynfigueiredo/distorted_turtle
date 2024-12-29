@@ -1,30 +1,30 @@
-import 'package:flutter/material.dart';
-import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter/material.dart'; // For Material widgets and BoxFit
+import 'package:carousel_slider/carousel_slider.dart'; // For CarouselSlider
+
 
 class CarouselWidget extends StatelessWidget {
   final List<String> imageUrls;
-  final BoxFit boxFit; // Add this property
+  final BoxFit boxFit;
 
-  // Accept BoxFit as a parameter
-  CarouselWidget({required this.imageUrls, this.boxFit = BoxFit.cover}); // Default to BoxFit.cover
+  CarouselWidget({required this.imageUrls, this.boxFit = BoxFit.cover});
 
   @override
   Widget build(BuildContext context) {
     return CarouselSlider(
       options: CarouselOptions(
-        height: 300.0, // Set the height of the carousel widget
+        height: 300.0,
         enlargeCenterPage: true,
         autoPlay: true,
         autoPlayInterval: Duration(seconds: 3),
-        viewportFraction: 1.0,  // Set the carousel to fill the width of the screen
+        viewportFraction: 1.0,
       ),
       items: imageUrls.map((url) {
         return Builder(
           builder: (BuildContext context) {
-            return Image.network(
-              url,
-              fit: boxFit,  // Apply the passed BoxFit here
-              width: double.infinity,  // Ensures the image takes up the full width of the carousel
+            return Image.asset(
+              url, // Use Image.asset for local images
+              fit: boxFit,
+              width: double.infinity,
             );
           },
         );

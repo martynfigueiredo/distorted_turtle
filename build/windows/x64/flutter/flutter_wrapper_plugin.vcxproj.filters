@@ -1,25 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\marty\dev\distorted_turtle\windows\flutter\ephemeral\cpp_client_wrapper\core_implementations.cc">
+    <ClCompile Include="C:\Users\Alvin\dev\distorted_turtle\windows\flutter\ephemeral\cpp_client_wrapper\core_implementations.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\marty\dev\distorted_turtle\windows\flutter\ephemeral\cpp_client_wrapper\standard_codec.cc">
+    <ClCompile Include="C:\Users\Alvin\dev\distorted_turtle\windows\flutter\ephemeral\cpp_client_wrapper\standard_codec.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\marty\dev\distorted_turtle\windows\flutter\ephemeral\cpp_client_wrapper\plugin_registrar.cc">
+    <ClCompile Include="C:\Users\Alvin\dev\distorted_turtle\windows\flutter\ephemeral\cpp_client_wrapper\plugin_registrar.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\marty\dev\distorted_turtle\windows\flutter\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\Alvin\dev\distorted_turtle\windows\flutter\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{AB91C4B9-434F-36D1-B4A0-7EDE68AC4E77}</UniqueIdentifier>
+      <UniqueIdentifier>{15DA0C1B-6472-3FE3-B3F1-76A7AE2E4F52}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{728B85A5-B935-3ECB-AA44-20C27701ABFE}</UniqueIdentifier>
+      <UniqueIdentifier>{75571118-A206-33DA-8994-0D491C930DA2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
