@@ -23,37 +23,37 @@ events:
       
       The output was:
       0
-      Vers├úo do MSBuild 17.12.12+1cce77968 para .NET Framework
-      Compila├º├úo de 29/12/2024 17:31:28 iniciada.
+      MSBuild version 17.12.12+1cce77968 for .NET Framework
+      Build started 12/29/2024 7:05:03 PM.
       
-      Projeto "C:\\Users\\Alvin\\dev\\distorted_turtle\\build\\windows\\x64\\CMakeFiles\\3.29.5-msvc4\\CompilerIdCXX\\CompilerIdCXX.vcxproj" no n├│ 1 (destinos padr├úo).
+      Project "C:\\Users\\marty\\dev\\distorted_turtle\\build\\windows\\x64\\CMakeFiles\\3.29.5-msvc4\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
       PrepareForBuild:
-        Criando o diret├│rio "Debug\\".
-        A sa├¡da estruturada est├í habilitada. A formata├º├úo do diagn├│stico do compilador refletir├í a hierarquia de erros. Consulte https://aka.ms/cpp/structured-output para obter mais detalhes.
-        Criando o diret├│rio "Debug\\CompilerIdCXX.tlog\\".
+        Creating directory "Debug\\".
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        Creating directory "Debug\\CompilerIdCXX.tlog\\".
       InitializeBuildStatus:
-        Criando "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
-        Tocando "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Creating "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        Touching "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
       ClCompile:
         C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
         CMakeCXXCompilerId.cpp
       Link:
         C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
-        CompilerIdCXX.vcxproj -> C:\\Users\\Alvin\\dev\\distorted_turtle\\build\\windows\\x64\\CMakeFiles\\3.29.5-msvc4\\CompilerIdCXX\\CompilerIdCXX.exe
+        CompilerIdCXX.vcxproj -> C:\\Users\\marty\\dev\\distorted_turtle\\build\\windows\\x64\\CMakeFiles\\3.29.5-msvc4\\CompilerIdCXX\\CompilerIdCXX.exe
       PostBuildEvent:
         for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
         :VCEnd
         CMAKE_CXX_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\Hostx64\\x64\\cl.exe
       FinalizeBuildStatus:
-        Excluindo o arquivo "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
-        Tocando "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
-      Projeto de compila├º├úo pronto "C:\\Users\\Alvin\\dev\\distorted_turtle\\build\\windows\\x64\\CMakeFiles\\3.29.5-msvc4\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (destinos padr├úo).
+        Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Done Building Project "C:\\Users\\marty\\dev\\distorted_turtle\\build\\windows\\x64\\CMakeFiles\\3.29.5-msvc4\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
       
-      Compila├º├úo com ├¬xito.
-          0 Aviso(s)
-          0 Erro(s)
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
       
-      Tempo Decorrido 00:00:02.03
+      Time Elapsed 00:00:00.63
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -61,7 +61,7 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
       
       The CXX compiler identification is MSVC, found in:
-        C:/Users/Alvin/dev/distorted_turtle/build/windows/x64/CMakeFiles/3.29.5-msvc4/CompilerIdCXX/CompilerIdCXX.exe
+        C:/Users/marty/dev/distorted_turtle/build/windows/x64/CMakeFiles/3.29.5-msvc4/CompilerIdCXX/CompilerIdCXX.exe
       
   -
     kind: "try_compile-v1"
@@ -72,8 +72,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/Alvin/dev/distorted_turtle/build/windows/x64/CMakeFiles/CMakeScratch/TryCompile-hy7oax"
-      binary: "C:/Users/Alvin/dev/distorted_turtle/build/windows/x64/CMakeFiles/CMakeScratch/TryCompile-hy7oax"
+      source: "C:/Users/marty/dev/distorted_turtle/build/windows/x64/CMakeFiles/CMakeScratch/TryCompile-cu96ae"
+      binary: "C:/Users/marty/dev/distorted_turtle/build/windows/x64/CMakeFiles/CMakeScratch/TryCompile-cu96ae"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -83,40 +83,40 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Alvin/dev/distorted_turtle/build/windows/x64/CMakeFiles/CMakeScratch/TryCompile-hy7oax'
+        Change Dir: 'C:/Users/marty/dev/distorted_turtle/build/windows/x64/CMakeFiles/CMakeScratch/TryCompile-cu96ae'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_09dd3.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
-        Vers├úo do MSBuild 17.12.12+1cce77968 para .NET Framework
-        Compila├º├úo de 29/12/2024 17:31:31 iniciada.
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_213dd.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.12.12+1cce77968 for .NET Framework
+        Build started 12/29/2024 7:05:04 PM.
         
-        Projeto "C:\\Users\\Alvin\\dev\\distorted_turtle\\build\\windows\\x64\\CMakeFiles\\CMakeScratch\\TryCompile-hy7oax\\cmTC_09dd3.vcxproj" no n├│ 1 (destinos padr├úo).
+        Project "C:\\Users\\marty\\dev\\distorted_turtle\\build\\windows\\x64\\CMakeFiles\\CMakeScratch\\TryCompile-cu96ae\\cmTC_213dd.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Criando o diret├│rio "cmTC_09dd3.dir\\Debug\\".
-          A sa├¡da estruturada est├í habilitada. A formata├º├úo do diagn├│stico do compilador refletir├í a hierarquia de erros. Consulte https://aka.ms/cpp/structured-output para obter mais detalhes.
-          Criando o diret├│rio "C:\\Users\\Alvin\\dev\\distorted_turtle\\build\\windows\\x64\\CMakeFiles\\CMakeScratch\\TryCompile-hy7oax\\Debug\\".
-          Criando o diret├│rio "cmTC_09dd3.dir\\Debug\\cmTC_09dd3.tlog\\".
+          Creating directory "cmTC_213dd.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\marty\\dev\\distorted_turtle\\build\\windows\\x64\\CMakeFiles\\CMakeScratch\\TryCompile-cu96ae\\Debug\\".
+          Creating directory "cmTC_213dd.dir\\Debug\\cmTC_213dd.tlog\\".
         InitializeBuildStatus:
-          Criando "cmTC_09dd3.dir\\Debug\\cmTC_09dd3.tlog\\unsuccessfulbuild" porque "AlwaysCreate" foi especificado.
-          Tocando "cmTC_09dd3.dir\\Debug\\cmTC_09dd3.tlog\\unsuccessfulbuild".
+          Creating "cmTC_213dd.dir\\Debug\\cmTC_213dd.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_213dd.dir\\Debug\\cmTC_213dd.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_09dd3.dir\\Debug\\\\" /Fd"cmTC_09dd3.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
-          Microsoft (R) C/C++ Optimizing Compiler Vers├úo 19.42.34435 para x64
-          Copyright (C) Microsoft Corporation. Todos os direitos reservados.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_09dd3.dir\\Debug\\\\" /Fd"cmTC_09dd3.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_213dd.dir\\Debug\\\\" /Fd"cmTC_213dd.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34435 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_213dd.dir\\Debug\\\\" /Fd"cmTC_213dd.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Alvin\\dev\\distorted_turtle\\build\\windows\\x64\\CMakeFiles\\CMakeScratch\\TryCompile-hy7oax\\Debug\\cmTC_09dd3.exe" /INCREMENTAL /ILK:"cmTC_09dd3.dir\\Debug\\cmTC_09dd3.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Alvin/dev/distorted_turtle/build/windows/x64/CMakeFiles/CMakeScratch/TryCompile-hy7oax/Debug/cmTC_09dd3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Alvin/dev/distorted_turtle/build/windows/x64/CMakeFiles/CMakeScratch/TryCompile-hy7oax/Debug/cmTC_09dd3.lib" /MACHINE:X64  /machine:x64 cmTC_09dd3.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_09dd3.vcxproj -> C:\\Users\\Alvin\\dev\\distorted_turtle\\build\\windows\\x64\\CMakeFiles\\CMakeScratch\\TryCompile-hy7oax\\Debug\\cmTC_09dd3.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\marty\\dev\\distorted_turtle\\build\\windows\\x64\\CMakeFiles\\CMakeScratch\\TryCompile-cu96ae\\Debug\\cmTC_213dd.exe" /INCREMENTAL /ILK:"cmTC_213dd.dir\\Debug\\cmTC_213dd.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/marty/dev/distorted_turtle/build/windows/x64/CMakeFiles/CMakeScratch/TryCompile-cu96ae/Debug/cmTC_213dd.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/marty/dev/distorted_turtle/build/windows/x64/CMakeFiles/CMakeScratch/TryCompile-cu96ae/Debug/cmTC_213dd.lib" /MACHINE:X64  /machine:x64 cmTC_213dd.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_213dd.vcxproj -> C:\\Users\\marty\\dev\\distorted_turtle\\build\\windows\\x64\\CMakeFiles\\CMakeScratch\\TryCompile-cu96ae\\Debug\\cmTC_213dd.exe
         FinalizeBuildStatus:
-          Excluindo o arquivo "cmTC_09dd3.dir\\Debug\\cmTC_09dd3.tlog\\unsuccessfulbuild".
-          Tocando "cmTC_09dd3.dir\\Debug\\cmTC_09dd3.tlog\\cmTC_09dd3.lastbuildstate".
-        Projeto de compila├º├úo pronto "C:\\Users\\Alvin\\dev\\distorted_turtle\\build\\windows\\x64\\CMakeFiles\\CMakeScratch\\TryCompile-hy7oax\\cmTC_09dd3.vcxproj" (destinos padr├úo).
+          Deleting file "cmTC_213dd.dir\\Debug\\cmTC_213dd.tlog\\unsuccessfulbuild".
+          Touching "cmTC_213dd.dir\\Debug\\cmTC_213dd.tlog\\cmTC_213dd.lastbuildstate".
+        Done Building Project "C:\\Users\\marty\\dev\\distorted_turtle\\build\\windows\\x64\\CMakeFiles\\CMakeScratch\\TryCompile-cu96ae\\cmTC_213dd.vcxproj" (default targets).
         
-        Compila├º├úo com ├¬xito.
-            0 Aviso(s)
-            0 Erro(s)
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
         
-        Tempo Decorrido 00:00:01.75
+        Time Elapsed 00:00:00.51
         
       exitCode: 0
   -

@@ -16,11 +16,12 @@ class Page3 extends StatelessWidget {
         children: [
           CarouselWidget(
             imageUrls: [
-              'https://via.placeholder.com/400x200',
-              'https://via.placeholder.com/400x200',
-              'https://via.placeholder.com/400x200',
-            ],
-          ),
+              'assets/images/7.png',
+              'assets/images/8.png',
+              'assets/images/9.png',
+  ],
+  boxFit: BoxFit.fill,
+),
           SizedBox(height: 20),
           ElevatedButton(
             onPressed: () {
