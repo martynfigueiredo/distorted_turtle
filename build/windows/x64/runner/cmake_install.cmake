@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Alvin/dev/distorted_turtle/windows/runner
+# Install script for directory: C:/Users/marty/dev/distorted_turtle/windows/runner
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
