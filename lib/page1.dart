@@ -47,7 +47,7 @@ class Page1 extends StatelessWidget {
                     child: Container(
                       padding: EdgeInsets.all(20),
                       child: Text(
-                        'This is just a simple 101 Flutter Project.',
+                        'This is just a simple 101 Flutter Project. Enjoy! :)',
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 18),
                       ),
