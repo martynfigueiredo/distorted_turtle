@@ -6,7 +6,7 @@ class CarouselWidget extends StatelessWidget {
   final List<String> imageUrls;
   final BoxFit boxFit;
 
-  CarouselWidget({required this.imageUrls, this.boxFit = BoxFit.cover});
+  const CarouselWidget({super.key, required this.imageUrls, this.boxFit = BoxFit.cover});
 
   @override
   Widget build(BuildContext context) {
