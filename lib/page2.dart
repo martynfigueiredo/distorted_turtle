@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'page1.dart';
 import 'page3.dart';
 import 'carousel_widget.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Page2 extends StatelessWidget {
   const Page2({super.key});
@@ -33,6 +34,33 @@ class Page2 extends StatelessWidget {
                 context,
                 MaterialPageRoute(builder: (context) => Page3()),
               );
+            },
+          ),
+          IconButton(
+            icon: Icon(Icons.help_outline, color: Colors.purple),
+            onPressed: () {
+              showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  return Dialog(
+                    backgroundColor: Colors.white.withOpacity(0.8),
+                    child: Container(
+                      padding: EdgeInsets.all(20),
+                      child: Text(
+                        'This is just a simple 101 Flutter Project.',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(fontSize: 18),
+                      ),
+                    ),
+                  );
+                },
+              );
+            },
+          ),
+          IconButton(
+            icon: Icon(Icons.code, color: Colors.purple),
+            onPressed: () {
+              launch('https://github.com/martynfigueiredo/distorted_turtle');
             },
           ),
         ],
