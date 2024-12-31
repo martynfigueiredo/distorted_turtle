@@ -10,7 +10,30 @@ class Page3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Page 3'),
+        title: Text('Distorted Turtle',
+        style: TextStyle(color: Colors.lightGreenAccent, fontFamily: 'Roboto'),
+        ),
+        backgroundColor: Colors.black,
+        actions: [
+          IconButton(
+            icon: Icon(Icons.do_disturb_on_rounded, color: Colors.lightGreenAccent),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Page1()),
+              );
+            },
+          ),
+          IconButton(
+            icon: Icon(Icons.tram_outlined, color: Colors.lightGreenAccent),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Page2()),
+              );
+            },
+          ),
+        ],
       ),
       body: Column(
         children: [
@@ -22,24 +45,16 @@ class Page3 extends StatelessWidget {
   ],
   boxFit: BoxFit.fill,
 ),
-          SizedBox(height: 20),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Page1()),
-              );
-            },
-            child: Text('Go to Page 1'),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Page2()),
-              );
-            },
-            child: Text('Go to Page 2'),
+Spacer(),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              'distortedturtle.dev since 2024',
+              style: TextStyle(
+                color: Colors.lightGreenAccent,
+                fontFamily: 'Roboto',
+              ),
+            ),
           ),
         ],
       ),
