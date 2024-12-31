@@ -12,19 +12,23 @@ class CarouselWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return CarouselSlider(
       options: CarouselOptions(
-        height: MediaQuery.of(context).size.height * 0.9,
+        height: MediaQuery.of(context).size.height * 0.8,
         enlargeCenterPage: true,
         autoPlay: true,
         autoPlayInterval: Duration(seconds: 3),
-        viewportFraction: 1.0,
+        autoPlayCurve: Curves.fastOutSlowIn,
+        viewportFraction: 0.8,
       ),
       items: imageUrls.map((url) {
         return Builder(
           builder: (BuildContext context) {
-            return Image.asset(
-              url, // Use Image.asset for local images
-              fit: boxFit,
-              width: double.infinity,
+            return ClipRRect(
+              borderRadius: BorderRadius.circular(30.0), // Adjust the radius as needed
+              child: Image.asset(
+                url, // Use Image.asset for local images
+                fit: boxFit,
+                width: double.infinity,
+              ),
             );
           },
         );

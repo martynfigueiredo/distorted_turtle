@@ -13,9 +13,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Distorted Turtle',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.transparent),
         useMaterial3: true,
-        scaffoldBackgroundColor: const Color.fromARGB(255, 0, 0, 0)
+        scaffoldBackgroundColor: Colors.transparent
       ),
       home: const Page1(),
       debugShowCheckedModeBanner: false,

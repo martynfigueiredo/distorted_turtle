@@ -11,13 +11,14 @@ class Page3 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Distorted Turtle',
-        style: TextStyle(color: Colors.lightGreenAccent, fontFamily: 'Roboto'),
+        style: TextStyle(color: Colors.purple, fontFamily: 'Roboto'),
         ),
-        backgroundColor: Colors.black,
-        iconTheme: IconThemeData(color: Colors.lightGreenAccent),
+        backgroundColor: Colors.transparent,
+        iconTheme: IconThemeData(color: Colors.purple),
+        centerTitle: true,
         actions: [
           IconButton(
-            icon: Icon(Icons.adb_rounded, color: Colors.lightGreenAccent),
+            icon: Icon(Icons.adb_rounded, color: Colors.purple),
             onPressed: () {
               Navigator.push(
                 context,
@@ -26,7 +27,7 @@ class Page3 extends StatelessWidget {
             },
           ),
           IconButton(
-            icon: Icon(Icons.rice_bowl_rounded, color: Colors.lightGreenAccent),
+            icon: Icon(Icons.rice_bowl_rounded, color: Colors.purple),
             onPressed: () {
               Navigator.push(
                 context,
@@ -40,20 +41,23 @@ class Page3 extends StatelessWidget {
         children: [
           CarouselWidget(
             imageUrls: [
-              'images/7.png',
-              'images/8.png',
-              'images/9.png',
+              'images/11.png',
+              'images/12.png',
+              'images/13.png',
+              'images/14.png',
+              'images/15.png',
   ],
   boxFit: BoxFit.fill,
 ),
 Spacer(),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(20.0),
             child: Text(
               'distortedturtle.dev since 2024',
               style: TextStyle(
-                color: Colors.lightGreenAccent,
+                color: Colors.purple,
                 fontFamily: 'Roboto',
+                fontSize: 20.0,
               ),
             ),
           ),
