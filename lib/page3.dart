@@ -14,9 +14,10 @@ class Page3 extends StatelessWidget {
         style: TextStyle(color: Colors.lightGreenAccent, fontFamily: 'Roboto'),
         ),
         backgroundColor: Colors.black,
+        iconTheme: IconThemeData(color: Colors.lightGreenAccent),
         actions: [
           IconButton(
-            icon: Icon(Icons.do_disturb_on_rounded, color: Colors.lightGreenAccent),
+            icon: Icon(Icons.adb_rounded, color: Colors.lightGreenAccent),
             onPressed: () {
               Navigator.push(
                 context,
@@ -25,7 +26,7 @@ class Page3 extends StatelessWidget {
             },
           ),
           IconButton(
-            icon: Icon(Icons.tram_outlined, color: Colors.lightGreenAccent),
+            icon: Icon(Icons.rice_bowl_rounded, color: Colors.lightGreenAccent),
             onPressed: () {
               Navigator.push(
                 context,
