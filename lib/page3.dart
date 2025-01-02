@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'page1.dart';
 import 'page2.dart';
 import 'carousel_widget.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class Page3 extends StatelessWidget {
   const Page3({super.key});
@@ -47,7 +46,10 @@ class Page3 extends StatelessWidget {
                     child: Container(
                       padding: EdgeInsets.all(20),
                       child: Text(
-                        'This is just a simple 101 Flutter Project. Enjoy! :)',
+  'This is just a simple 101 Flutter Project.\n'
+  'Built by Martyn (https://martynfigueiredo.dev) & Alvin (https://alvinpereira.dev).\n'
+  'Here\'s the code on Github. (https://github.com/martynfigueiredo/distorted_turtle)\n'
+  'Enjoy! :)',
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 18),
                       ),
@@ -55,12 +57,6 @@ class Page3 extends StatelessWidget {
                   );
                 },
               );
-            },
-          ),
-          IconButton(
-            icon: Icon(Icons.code, color: Colors.purple),
-            onPressed: () {
-              launch('https://github.com/martynfigueiredo/distorted_turtle');
             },
           ),
         ],
