@@ -10,8 +10,9 @@ class Page3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Distorted Turtle',
-        style: TextStyle(color: Colors.purple, fontFamily: 'Roboto'),
+        title: Text(
+          'Distorted Turtle',
+          style: TextStyle(color: Colors.purple, fontFamily: 'Roboto'),
         ),
         backgroundColor: Colors.transparent,
         iconTheme: IconThemeData(color: Colors.purple),
@@ -46,10 +47,10 @@ class Page3 extends StatelessWidget {
                     child: Container(
                       padding: EdgeInsets.all(20),
                       child: Text(
-  'This is just a simple 101 Flutter Project.\n'
-  'Built by Martyn (https://martynfigueiredo.dev) & Alvin (https://alvinpereira.dev).\n'
-  'Here\'s the code on Github. (https://github.com/martynfigueiredo/distorted_turtle)\n'
-  'Enjoy! :)',
+                        'This is just a simple 101 Flutter Project.\n'
+                        'Built by Martyn (https://martynfigueiredo.dev) & Alvin (https://alvinpereira.dev).\n'
+                        'Here\'s the code on Github. (https://github.com/martynfigueiredo/distorted_turtle)\n'
+                        'Enjoy! :)',
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 18),
                       ),
@@ -63,17 +64,23 @@ class Page3 extends StatelessWidget {
       ),
       body: Column(
         children: [
-          CarouselWidget(
-            imageUrls: [
-              'images/11.png',
-              'images/12.png',
-              'images/13.png',
-              'images/14.png',
-              'images/15.png',
-  ],
-  boxFit: BoxFit.fill,
-),
-Spacer(),
+          Center(
+            child: SizedBox(
+              width: MediaQuery.of(context).size.width *
+                  0.8, // Adjust the width as needed
+              child: CarouselWidget(
+                imageUrls: [
+                  'images/11.png',
+                  'images/12.png',
+                  'images/13.png',
+                  'images/14.png',
+                  'images/15.png',
+                ],
+                boxFit: BoxFit.fill,
+              ),
+            ),
+          ),
+          Spacer(),
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: Text(
