@@ -18,47 +18,56 @@ class Page1 extends StatelessWidget {
         iconTheme: IconThemeData(color: Colors.purple),
         centerTitle: true,
         actions: [
-          IconButton(
-            icon: Icon(Icons.rice_bowl_rounded, color: Colors.purple),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Page2()),
-              );
-            },
+          Tooltip(
+            message: 'Page 2',
+            child: IconButton(
+              icon: Icon(Icons.adb_rounded, color: Colors.purple),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Page2()),
+                );
+              },
+            ),
           ),
-          IconButton(
-            icon: Icon(Icons.hive_rounded, color: Colors.purple),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Page3()),
-              );
-            },
+          Tooltip(
+            message: 'Page 3',
+            child: IconButton(
+              icon: Icon(Icons.adb_rounded, color: Colors.purple),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Page3()),
+                );
+              },
+            ),
           ),
-          IconButton(
-            icon: Icon(Icons.help_outline, color: Colors.purple),
-            onPressed: () {
-              showDialog(
-                context: context,
-                builder: (BuildContext context) {
-                  return Dialog(
-                    backgroundColor: Colors.white.withOpacity(0.8),
-                    child: Container(
-                      padding: EdgeInsets.all(20),
-                      child: Text(
-                        'This is just a simple 101 Flutter Project.\n'
-                        'Built by Martyn (https://martynfigueiredo.dev) & Alvin (https://alvinpereira.dev).\n'
-                        'Here\'s the code on Github. (https://github.com/martynfigueiredo/distorted_turtle)\n'
-                        'Enjoy! :)',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 18),
+          Tooltip(
+            message: 'Help',
+            child: IconButton(
+              icon: Icon(Icons.help_outline, color: Colors.purple),
+              onPressed: () {
+                showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return Dialog(
+                      backgroundColor: Colors.white.withOpacity(0.8),
+                      child: Container(
+                        padding: EdgeInsets.all(20),
+                        child: Text(
+                          'This is just a simple 101 Flutter Project.\n'
+                          'Built by Martyn (https://martynfigueiredo.dev) & Alvin (https://alvinpereira.dev).\n'
+                          'Here\'s the code on Github. (https://github.com/martynfigueiredo/distorted_turtle)\n'
+                          'Enjoy! :)',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(fontSize: 18),
+                        ),
                       ),
-                    ),
-                  );
-                },
-              );
-            },
+                    );
+                  },
+                );
+              },
+            ),
           ),
         ],
       ),

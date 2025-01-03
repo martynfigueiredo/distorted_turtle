@@ -18,25 +18,33 @@ class Page2 extends StatelessWidget {
         iconTheme: IconThemeData(color: Colors.purple),
         centerTitle: true,
         actions: [
-          IconButton(
-            icon: Icon(Icons.adb_rounded, color: Colors.purple),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Page1()),
-              );
-            },
-          ),
-          IconButton(
-            icon: Icon(Icons.hive_rounded, color: Colors.purple),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Page3()),
-              );
-            },
-          ),
-          IconButton(
+          Tooltip(
+  message: 'Page 1',
+  child: IconButton(
+    icon: Icon(Icons.adb_rounded, color: Colors.purple),
+    onPressed: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => Page1()),
+      );
+    },
+  ),
+),
+          Tooltip(
+  message: 'Page 3',
+  child: IconButton(
+    icon: Icon(Icons.adb_rounded, color: Colors.purple),
+    onPressed: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => Page3()),
+      );
+    },
+  ),
+),
+Tooltip(
+  message: 'Help',
+         child: IconButton(
             icon: Icon(Icons.help_outline, color: Colors.purple),
             onPressed: () {
               showDialog(
@@ -60,6 +68,7 @@ class Page2 extends StatelessWidget {
               );
             },
           ),
+),
         ],
       ),
       body: Column(
