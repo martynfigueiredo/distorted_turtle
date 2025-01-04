@@ -2,26 +2,31 @@ import 'package:flutter/material.dart';
 import 'page1.dart';
 import 'page2.dart';
 import 'carousel_widget.dart';
+import 'package:provider/provider.dart';
+import 'theme_notifier.dart';
 
 class Page3 extends StatelessWidget {
   const Page3({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final themeNotifier = Provider.of<ThemeNotifier>(context);
     return Scaffold(
       appBar: AppBar(
         title: Text(
           'Distorted Turtle',
-          style: TextStyle(color: Colors.purple, fontFamily: 'Roboto'),
+          style: TextStyle(color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black, 
+          fontFamily: 'Roboto',
+          fontSize: 12.0,),
         ),
         backgroundColor: Colors.transparent,
-        iconTheme: IconThemeData(color: Colors.purple),
+        iconTheme: IconThemeData(color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black),
         centerTitle: true,
         actions: [
           Tooltip(
   message: 'Page 1',
   child: IconButton(
-    icon: Icon(Icons.adb_rounded, color: Colors.purple),
+    icon: Icon(Icons.adb_rounded, color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black),
     onPressed: () {
       Navigator.push(
         context,
@@ -33,7 +38,7 @@ class Page3 extends StatelessWidget {
           Tooltip(
   message: 'Page 2',
   child: IconButton(
-    icon: Icon(Icons.adb_rounded, color: Colors.purple),
+    icon: Icon(Icons.adb_rounded, color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black),
     onPressed: () {
       Navigator.push(
         context,
@@ -43,24 +48,34 @@ class Page3 extends StatelessWidget {
   ),
 ),
 Tooltip(
+  message: 'Switch Theme',
+  child: IconButton(
+            icon: Icon(themeNotifier.themeMode == ThemeMode.light ? Icons.dark_mode : Icons.light_mode),
+            onPressed: () {
+              themeNotifier.toggleTheme();
+            },
+          ),
+),
+Tooltip(
   message: 'Help',
          child: IconButton(
-            icon: Icon(Icons.help_outline, color: Colors.purple),
+            icon: Icon(Icons.help_outline, color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black),
             onPressed: () {
               showDialog(
                 context: context,
                 builder: (BuildContext context) {
                   return Dialog(
-                    backgroundColor: Colors.white.withOpacity(0.8),
+                    backgroundColor: Theme.of(context).brightness == Brightness.dark ? Colors.black.withOpacity(0.8) : Colors.white.withOpacity(0.8),
                     child: Container(
                       padding: EdgeInsets.all(20),
                       child: Text(
                         'This is just a simple 101 Flutter Project.\n'
-                        'Built by Martyn (https://martynfigueiredo.dev) & Alvin (https://alvinpereira.dev).\n'
-                        'Here\'s the code on Github. (https://github.com/martynfigueiredo/distorted_turtle)\n'
+                        'Built by Martyn & Alvin.\n'
                         'Enjoy! :)',
                         textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 18),
+                        style: TextStyle(
+                          color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black,
+                          fontSize: 12),
                       ),
                     ),
                   );
@@ -95,9 +110,9 @@ Tooltip(
             child: Text(
               'distortedturtle.dev since 2024',
               style: TextStyle(
-                color: Colors.purple,
+                color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black,
                 fontFamily: 'Roboto',
-                fontSize: 20.0,
+                fontSize: 12.0,
               ),
             ),
           ),
