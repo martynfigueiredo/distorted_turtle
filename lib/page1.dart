@@ -92,7 +92,7 @@ class Page1 extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: Text(
-              'distortedturtle.dev since 2024',
+              'distortedturtle.dev since 2024..',
               style: TextStyle(
                 color: Colors.purple,
                 fontFamily: 'Roboto',

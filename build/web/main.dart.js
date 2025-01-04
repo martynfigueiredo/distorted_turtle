@@ -32319,7 +32319,7 @@ A.js.prototype={
 L(a){var s,r=null,q=A.jN("Distorted Turtle",A.e2(r,r,B.Y,r,r,r,r,r,"Roboto",r,r,r,r,r,r,r,r,!0,r,r,r,r,r,r,r,r),r),p=t.af
 q=A.a7H(A.b([A.ip(A.hQ(r,A.hP(B.bW,B.Y,r),r,new A.W2(a),r,r),"Page 2"),A.ip(A.hQ(r,A.hP(B.bW,B.Y,r),r,new A.W3(a),r,r),"Page 3"),A.ip(A.hQ(r,A.hP(B.fy,B.Y,r),r,new A.W4(a),r,r),"Help")],p),B.x,!0,new A.bY(r,r,r,r,r,B.Y,r,r,r),q)
 s=A.bN(a,r,t.w).w
-return A.a92(q,A.a7T(A.b([A.mV(A.ZK(new A.mU(A.b(["images/1.png","images/2.png","images/3.png","images/4.png","images/5.png"],t.s),B.eV,r),r,s.a.a*0.8),r,r),new A.oe(r),new A.eS(B.fu,A.jN("distortedturtle.dev since 2024",A.e2(r,r,B.Y,r,r,r,r,r,"Roboto",r,r,20,r,r,r,r,r,!0,r,r,r,r,r,r,r,r),r),r)],p),B.aZ))}}
+return A.a92(q,A.a7T(A.b([A.mV(A.ZK(new A.mU(A.b(["images/1.png","images/2.png","images/3.png","images/4.png","images/5.png"],t.s),B.eV,r),r,s.a.a*0.8),r,r),new A.oe(r),new A.eS(B.fu,A.jN("distortedturtle.dev since 2024..",A.e2(r,r,B.Y,r,r,r,r,r,"Roboto",r,r,20,r,r,r,r,r,!0,r,r,r,r,r,r,r,r),r),r)],p),B.aZ))}}
 A.W2.prototype={
 $0(){var s=A.nA(new A.W1(),null,t.z)
 A.h7(this.a,!1).hr(s)},
