@@ -17,7 +17,7 @@ class Page1 extends StatelessWidget {
           'Distorted Turtle',
           style: TextStyle(color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black, 
           fontFamily: 'Roboto',
-          fontSize: 12.0,),
+          fontSize: 14.0,),
         ),
         backgroundColor: Colors.transparent,
         iconTheme: IconThemeData(color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black),
@@ -26,7 +26,7 @@ class Page1 extends StatelessWidget {
           Tooltip(
             message: 'Page 2',
             child: IconButton(
-              icon: Icon(Icons.adb_rounded, color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black),
+              icon: Icon(Icons.adb_rounded, color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black, size: 18.0),
               onPressed: () {
                 Navigator.push(
                   context,
@@ -38,7 +38,7 @@ class Page1 extends StatelessWidget {
           Tooltip(
             message: 'Page 3',
             child: IconButton(
-              icon: Icon(Icons.adb_rounded, color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black),
+              icon: Icon(Icons.adb_rounded, color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black, size: 18.0),
               onPressed: () {
                 Navigator.push(
                   context,
@@ -50,7 +50,7 @@ class Page1 extends StatelessWidget {
           Tooltip(
   message: 'Switch Theme',
   child: IconButton(
-            icon: Icon(themeNotifier.themeMode == ThemeMode.light ? Icons.dark_mode : Icons.light_mode),
+            icon: Icon(themeNotifier.themeMode == ThemeMode.light ? Icons.dark_mode : Icons.light_mode, size: 18.0),
             onPressed: () {
               themeNotifier.toggleTheme();
             },
@@ -59,7 +59,7 @@ class Page1 extends StatelessWidget {
           Tooltip(
             message: 'Help',
             child: IconButton(
-              icon: Icon(Icons.help_outline, color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black),
+              icon: Icon(Icons.help_outline, color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black, size: 18.0),
               onPressed: () {
                 showDialog(
                   context: context,
@@ -75,7 +75,7 @@ class Page1 extends StatelessWidget {
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black,
-                            fontSize: 12),
+                            fontSize: 14),
                         ),
                       ),
                     );
@@ -111,7 +111,7 @@ class Page1 extends StatelessWidget {
               style: TextStyle(
                 color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black,
                 fontFamily: 'Roboto',
-                fontSize: 12.0,
+                fontSize: 14.0,
               ),
             ),
           ),
