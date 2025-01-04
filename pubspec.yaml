@@ -73,6 +73,7 @@ flutter_launcher_icons:
 # The following section is specific to Flutter packages.
 flutter:
   assets:
+    - icons/turtle.png
     - images/1.png
     - images/2.png
     - images/3.png

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'page1.dart';
-import 'page3.dart';
 import 'carousel_widget.dart';
 import 'package:provider/provider.dart';
 import 'theme_notifier.dart';
@@ -26,23 +25,17 @@ class Page2 extends StatelessWidget {
           Tooltip(
   message: 'Page 1',
   child: IconButton(
-    icon: Icon(Icons.adb_rounded, color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black, size: 18.0),
+    icon: Text(
+      '🐢',
+      style: TextStyle(
+        fontSize: 18.0,
+        color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black,
+      ),
+    ),
     onPressed: () {
-      Navigator.push(
+      Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => Page1()),
-      );
-    },
-  ),
-),
-          Tooltip(
-  message: 'Page 3',
-  child: IconButton(
-    icon: Icon(Icons.adb_rounded, color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black, size: 18.0),
-    onPressed: () {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => Page3()),
       );
     },
   ),
@@ -88,17 +81,20 @@ Tooltip(
       ),
       body: Column(
         children: [
+          Spacer(),
           Center(
             child: SizedBox(
               width: MediaQuery.of(context).size.width *
                   0.8, // Adjust the width as needed
               child: CarouselWidget(
                 imageUrls: [
-                  'images/6.png',
-                  'images/7.png',
-                  'images/8.png',
                   'images/9.png',
                   'images/10.png',
+                  'images/11.png',
+                  'images/12.png',
+                  'images/13.png',
+                  'images/14.png',
+                  'images/15.png',
                 ],
                 boxFit: BoxFit.fill,
               ),

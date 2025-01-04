@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'page2.dart';
-import 'page3.dart';
 import 'carousel_widget.dart';
 import 'package:provider/provider.dart';
 import 'theme_notifier.dart';
@@ -24,29 +23,23 @@ class Page1 extends StatelessWidget {
         centerTitle: true,
         actions: [
           Tooltip(
-            message: 'Page 2',
-            child: IconButton(
-              icon: Icon(Icons.adb_rounded, color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black, size: 18.0),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Page2()),
-                );
-              },
-            ),
-          ),
-          Tooltip(
-            message: 'Page 3',
-            child: IconButton(
-              icon: Icon(Icons.adb_rounded, color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black, size: 18.0),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Page3()),
-                );
-              },
-            ),
-          ),
+  message: 'Page 2',
+  child: IconButton(
+    icon: Text(
+      '🐢',
+      style: TextStyle(
+        fontSize: 18.0,
+        color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black,
+      ),
+    ),
+    onPressed: () {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => Page2()),
+      );
+    },
+  ),
+),
           Tooltip(
   message: 'Switch Theme',
   child: IconButton(
@@ -86,8 +79,12 @@ class Page1 extends StatelessWidget {
           ),
         ],
       ),
-      body: Column(
+      body: 
+      
+      
+      Column(
         children: [
+          Spacer(),
           Center(
             child: SizedBox(
               width: MediaQuery.of(context).size.width * 0.8,
@@ -98,6 +95,9 @@ class Page1 extends StatelessWidget {
                   'images/3.png',
                   'images/4.png',
                   'images/5.png',
+                  'images/6.png',
+                  'images/7.png',
+                  'images/8.png',
                 ],
                 boxFit: BoxFit.fill,
               ),
