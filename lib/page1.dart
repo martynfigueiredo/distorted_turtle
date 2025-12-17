@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'page2.dart';
-import 'carousel_widget.dart';
+// import 'page2.dart';
+// import 'carousel_widget.dart';
 import 'package:provider/provider.dart';
 import 'theme_notifier.dart';
 
@@ -22,24 +22,6 @@ class Page1 extends StatelessWidget {
         iconTheme: IconThemeData(color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black),
         centerTitle: true,
         actions: [
-          Tooltip(
-  message: 'Page 2',
-  child: IconButton(
-    icon: Text(
-      '🐢',
-      style: TextStyle(
-        fontSize: 18.0,
-        color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black,
-      ),
-    ),
-    onPressed: () {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => Page2()),
-      );
-    },
-  ),
-),
           Tooltip(
   message: 'Switch Theme',
   child: IconButton(
@@ -80,30 +62,23 @@ class Page1 extends StatelessWidget {
         ],
       ),
       body: 
-      
-      
       Column(
         children: [
-          Spacer(),
+          const Spacer(),
           Center(
             child: SizedBox(
               width: MediaQuery.of(context).size.width * 0.8,
-              child: CarouselWidget(
-                imageUrls: [
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(30.0),
+                child: Image.asset(
                   'images/1.png',
-                  'images/2.png',
-                  'images/3.png',
-                  'images/4.png',
-                  'images/5.png',
-                  'images/6.png',
-                  'images/7.png',
-                  'images/8.png',
-                ],
-                boxFit: BoxFit.fill,
+                  fit: BoxFit.fill,
+                  width: double.infinity,
+                ),
               ),
             ),
           ),
-          Spacer(),
+          const Spacer(),
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: Text(
