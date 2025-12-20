@@ -93,14 +93,12 @@ Tooltip(
         ],
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Spacer(),
-          Center(
-            child: SizedBox(
-              width: MediaQuery.of(context).size.width *
-                  0.8, // Adjust the width as needed
+          Flexible(
+            child: Center(
               child: CarouselWidget(
-                imageUrls: [
+                imageUrls: const [
                   'images/9.png',
                   'images/10.png',
                   'images/11.png',
@@ -109,11 +107,11 @@ Tooltip(
                   'images/14.png',
                   'images/15.png',
                 ],
-                boxFit: BoxFit.fill,
+                boxFit: BoxFit.contain,
               ),
             ),
           ),
-          Spacer(),
+          const SizedBox(height: 40),
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: Text(

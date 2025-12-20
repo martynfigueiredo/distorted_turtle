@@ -76,22 +76,23 @@ class Page1 extends StatelessWidget {
       ),
       body: 
       Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Spacer(),
-          Center(
-            child: SizedBox(
-              width: MediaQuery.of(context).size.width * 0.8,
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(30.0),
-                child: Image.asset(
-                  'images/1.png',
-                  fit: BoxFit.fill,
-                  width: double.infinity,
+          Flexible(
+            child: Center(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(30.0),
+                  child: Image.asset(
+                    'images/1.png',
+                    fit: BoxFit.contain,
+                  ),
                 ),
               ),
             ),
           ),
-          const Spacer(),
+          const SizedBox(height: 20),
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: Text(

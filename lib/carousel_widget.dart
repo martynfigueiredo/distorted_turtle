@@ -12,10 +12,10 @@ class CarouselWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return CarouselSlider(
       options: CarouselOptions(
-        height: MediaQuery.of(context).size.height * 0.7,
+        height: double.infinity,
         enlargeCenterPage: true,
         autoPlay: true,
-        autoPlayInterval: Duration(seconds: 3),
+        autoPlayInterval: const Duration(seconds: 3),
         autoPlayCurve: Curves.fastOutSlowIn,
         viewportFraction: 0.8,
       ),
