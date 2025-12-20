@@ -3,6 +3,7 @@ import 'page1.dart';
 import 'carousel_widget.dart';
 import 'package:provider/provider.dart';
 import 'theme_notifier.dart';
+import 'changelog_page.dart';
 
 class Page2 extends StatelessWidget {
   const Page2({super.key});
@@ -50,6 +51,18 @@ Tooltip(
           ),
 ),
 Tooltip(
+  message: 'Changelog',
+  child: IconButton(
+    icon: const Icon(Icons.history, size: 18.0),
+    onPressed: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const ChangelogPage()),
+      );
+    },
+  ),
+),
+Tooltip(
   message: 'Help',
          child: IconButton(
             icon: Icon(Icons.help_outline, color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black, size: 18.0),
@@ -58,7 +71,7 @@ Tooltip(
                 context: context,
                 builder: (BuildContext context) {
                   return Dialog(
-                    backgroundColor: Theme.of(context).brightness == Brightness.dark ? Colors.black.withOpacity(0.8) : Colors.white.withOpacity(0.8),
+                    backgroundColor: Theme.of(context).brightness == Brightness.dark ? Colors.black.withValues(alpha: 0.8) : Colors.white.withValues(alpha: 0.8),
                     child: Container(
                       padding: EdgeInsets.all(20),
                       child: Text(
