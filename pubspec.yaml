@@ -88,7 +88,6 @@ flutter:
     - images/turtle_18.png
     - images/turtle_19.png
     - images/turtle_20.png
-    - images/github_logo.png
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

@@ -57,19 +57,6 @@ class _Page1State extends State<Page1> {
         iconTheme: IconThemeData(color: isDark ? Colors.white : Colors.black),
         centerTitle: true,
         actions: [
-          IconButton(
-            icon: Image.asset(
-              'images/github_logo.png',
-              width: 18,
-              height: 18,
-              color: isDark ? Colors.white : Colors.black,
-              colorBlendMode: BlendMode.srcIn,
-              fit: BoxFit.contain,
-              errorBuilder: (context, error, stackTrace) => const Icon(Icons.code),
-            ),
-            onPressed: () => _launchUrl('https://github.com/martynfigueiredo/distorted_turtle'),
-            tooltip: 'GitHub Repository',
-          ),
           PopupMenuButton<ThemeMode>(
             icon: Icon(
               themeNotifier.themeMode == ThemeMode.system
@@ -129,18 +116,6 @@ class _Page1State extends State<Page1> {
             ),
           ),
           Tooltip(
-            message: 'About',
-            child: IconButton(
-              icon: const Icon(Icons.info_outline, size: 18.0),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const AboutPage()),
-                );
-              },
-            ),
-          ),
-          Tooltip(
             message: 'Help',
             child: IconButton(
               icon: Icon(Icons.help_outline, color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black, size: 18.0),
@@ -149,7 +124,19 @@ class _Page1State extends State<Page1> {
                   context: context,
                   builder: (context) => AlertDialog(
                     title: const Text('Help'),
-                    content: const Text('This is a simple Material 3 app. \n\nClick on the theme icon to switch between light, dark, and system themes. \n\nClick the refresh button to see a new turtle! \n\nCheck the Changelog for version history.'),
+                    content: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text('This is a simple Material 3 app. \n\nClick on the theme icon to switch between light, dark, and system themes. \n\nClick the refresh button to see a new turtle! \n\nCheck the Changelog for version history.'),
+                        const SizedBox(height: 16),
+                        TextButton.icon(
+                          onPressed: () => _launchUrl('https://github.com/martynfigueiredo/distorted_turtle'),
+                          icon: const Icon(Icons.code, size: 16),
+                          label: const Text('Source Code on GitHub'),
+                        ),
+                      ],
+                    ),
                     actions: [
                       TextButton(
                         onPressed: () => Navigator.pop(context),

