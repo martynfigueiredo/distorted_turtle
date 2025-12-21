@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:provider/provider.dart';
 import 'theme_notifier.dart';
 import 'changelog_page.dart';
+import 'about_page.dart';
 
 class Page1 extends StatelessWidget {
   const Page1({super.key});
@@ -39,6 +40,18 @@ class Page1 extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const ChangelogPage()),
+                );
+              },
+            ),
+          ),
+          Tooltip(
+            message: 'About',
+            child: IconButton(
+              icon: const Icon(Icons.info_outline, size: 18.0),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const AboutPage()),
                 );
               },
             ),
