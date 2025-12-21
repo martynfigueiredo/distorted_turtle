@@ -48,14 +48,6 @@ class AboutPage extends StatelessWidget {
                     label: const Text('Visit GitHub Repository'),
                   ),
                 ),
-...
-  Future<void> _launchUrl(String url) async {
-    final Uri uri = Uri.parse(url);
-    if (!await (launchUrl(uri))) {
-      throw Exception('Could not launch $url');
-    }
-  }
-}
                 const SizedBox(height: 24),
                 const Text(
                   'Image Prompts',
