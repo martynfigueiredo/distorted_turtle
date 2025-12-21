@@ -129,45 +129,49 @@ class _Page1State extends State<Page1> {
           ),
         ],
       ),
-      body: Center(
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              const SizedBox(height: 20.0),
-              Container(
-                width: 300.0,
-                height: 300.0,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30.0),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withValues(alpha: 0.2),
-                      spreadRadius: 5,
-                      blurRadius: 10,
-                      offset: const Offset(0, 5),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Flexible(
+            child: Center(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30.0),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withValues(alpha: 0.2),
+                        spreadRadius: 5,
+                        blurRadius: 10,
+                        offset: const Offset(0, 5),
+                      ),
+                    ],
+                  ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(30.0),
+                    child: Image.asset(
+                      'images/turtle_$_turtleIndex.png',
+                      fit: BoxFit.contain,
                     ),
-                  ],
-                ),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(30.0),
-                  child: Image.asset(
-                    'images/turtle_$_turtleIndex.png',
-                    fit: BoxFit.contain,
                   ),
                 ),
               ),
-              const SizedBox(height: 40.0),
-              const Text(
-                'distortedturtle.dev since 2024',
-                style: TextStyle(
-                  fontFamily: 'Roboto',
-                  fontSize: 12.0,
-                ),
-              ),
-            ],
+            ),
           ),
-        ),
+          const SizedBox(height: 20),
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Text(
+              'distortedturtle.dev since 2024',
+              style: TextStyle(
+                color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black,
+                fontFamily: 'Roboto',
+                fontSize: 14.0,
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
