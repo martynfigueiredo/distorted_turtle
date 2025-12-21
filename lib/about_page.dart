@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'app_footer.dart';
 
 class AboutPage extends StatelessWidget {
@@ -42,16 +43,19 @@ class AboutPage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 4.0),
                   child: TextButton.icon(
-                    onPressed: () {
-                      final appFooter = AppFooter();
-                      // This is a bit hacky but we need url launcher here too if we want a separate button
-                      // or we can just rely on the section above.
-                      // Let's use a standard way.
-                    },
+                    onPressed: () => _launchUrl('https://github.com/martynfigueiredo/distorted_turtle'),
                     icon: const Icon(Icons.code),
                     label: const Text('Visit GitHub Repository'),
                   ),
                 ),
+...
+  Future<void> _launchUrl(String url) async {
+    final Uri uri = Uri.parse(url);
+    if (!await (launchUrl(uri))) {
+      throw Exception('Could not launch $url');
+    }
+  }
+}
                 const SizedBox(height: 24),
                 const Text(
                   'Image Prompts',

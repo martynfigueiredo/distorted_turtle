@@ -116,6 +116,18 @@ class _Page1State extends State<Page1> {
             ),
           ),
           Tooltip(
+            message: 'About',
+            child: IconButton(
+              icon: const Icon(Icons.info_outline, size: 18.0),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const AboutPage()),
+                );
+              },
+            ),
+          ),
+          Tooltip(
             message: 'Help',
             child: IconButton(
               icon: Icon(Icons.help_outline, color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black, size: 18.0),
