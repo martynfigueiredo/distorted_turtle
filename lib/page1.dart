@@ -5,6 +5,7 @@ import 'theme_notifier.dart';
 import 'changelog_page.dart';
 import 'about_page.dart';
 import 'app_footer.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Page1 extends StatefulWidget {
   const Page1({super.key});
@@ -22,21 +23,43 @@ class _Page1State extends State<Page1> {
     _turtleIndex = Random().nextInt(20) + 1;
   }
 
+  Future<void> _launchUrl(String url) async {
+    final Uri uri = Uri.parse(url);
+    if (!await launchUrl(uri)) {
+      throw Exception('Could not launch $url');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final themeNotifier = Provider.of<ThemeNotifier>(context);
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
     return Scaffold(
       appBar: AppBar(
         title: Text(
           'Distorted Turtle',
-          style: TextStyle(color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black, 
+          style: TextStyle(color: isDark ? Colors.white : Colors.black, 
           fontFamily: 'Roboto',
           fontSize: 14.0,),
         ),
         backgroundColor: Colors.transparent,
-        iconTheme: IconThemeData(color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black),
+        iconTheme: IconThemeData(color: isDark ? Colors.white : Colors.black),
         centerTitle: true,
         actions: [
+          IconButton(
+            icon: Image.network(
+              'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png',
+              width: 18,
+              height: 18,
+              color: isDark ? Colors.white : Colors.black,
+              colorBlendMode: BlendMode.srcIn,
+              fit: BoxFit.contain,
+              errorBuilder: (context, error, stackTrace) => const Icon(Icons.code),
+            ),
+            onPressed: () => _launchUrl('https://github.com/martynfigueiredo/distorted_turtle'),
+            tooltip: 'GitHub Repository',
+          ),
           PopupMenuButton<ThemeMode>(
             icon: Icon(
               themeNotifier.themeMode == ThemeMode.system
