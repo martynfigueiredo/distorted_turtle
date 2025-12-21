@@ -30,6 +30,7 @@ migrate_working_dir/
 .pub/
 build/*
 !build/web/
+!build/app/outputs/flutter-apk/app-release.apk
 
 # Android Studio related
 android/app/debug/

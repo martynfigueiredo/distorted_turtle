@@ -58,8 +58,8 @@ class _Page1State extends State<Page1> {
         centerTitle: true,
         actions: [
           IconButton(
-            icon: Image.network(
-              'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png',
+            icon: Image.asset(
+              'images/github_logo.png',
               width: 18,
               height: 18,
               color: isDark ? Colors.white : Colors.black,
