@@ -23,9 +23,7 @@ class Page1 extends StatelessWidget {
         iconTheme: IconThemeData(color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black),
         centerTitle: true,
         actions: [
-          Tooltip(
-  message: 'Switch Theme',
-  child: IconButton(
+          PopupMenuButton<ThemeMode>(
             icon: Icon(
               themeNotifier.themeMode == ThemeMode.system
                   ? Icons.brightness_auto
@@ -34,11 +32,43 @@ class Page1 extends StatelessWidget {
                       : Icons.dark_mode),
               size: 18.0,
             ),
-            onPressed: () {
-              themeNotifier.toggleTheme();
+            tooltip: 'Switch Theme',
+            onSelected: (ThemeMode mode) {
+              themeNotifier.setThemeMode(mode);
             },
+            itemBuilder: (BuildContext context) => <PopupMenuEntry<ThemeMode>>[
+              const PopupMenuItem<ThemeMode>(
+                value: ThemeMode.system,
+                child: Row(
+                  children: [
+                    Icon(Icons.brightness_auto, size: 18),
+                    SizedBox(width: 8),
+                    Text('System'),
+                  ],
+                ),
+              ),
+              const PopupMenuItem<ThemeMode>(
+                value: ThemeMode.light,
+                child: Row(
+                  children: [
+                    Icon(Icons.light_mode, size: 18),
+                    SizedBox(width: 8),
+                    Text('Light'),
+                  ],
+                ),
+              ),
+              const PopupMenuItem<ThemeMode>(
+                value: ThemeMode.dark,
+                child: Row(
+                  children: [
+                    Icon(Icons.dark_mode, size: 18),
+                    SizedBox(width: 8),
+                    Text('Dark'),
+                  ],
+                ),
+              ),
+            ],
           ),
-),
           Tooltip(
             message: 'Changelog',
             child: IconButton(
