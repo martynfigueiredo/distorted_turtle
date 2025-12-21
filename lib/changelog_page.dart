@@ -33,7 +33,7 @@ class ChangelogPage extends StatelessWidget {
             date: '2024-01-01',
             changes: [
               'Initial release of Distorted Turtle.',
-              'Page 1 and Page 2 implementation.',
+              'Page 1 implementation.',
             ],
           ),
         ],

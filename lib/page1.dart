@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-// import 'page2.dart';
-// import 'carousel_widget.dart';
 import 'package:provider/provider.dart';
 import 'theme_notifier.dart';
 import 'changelog_page.dart';
