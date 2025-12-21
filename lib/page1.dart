@@ -5,8 +5,21 @@ import 'theme_notifier.dart';
 import 'changelog_page.dart';
 import 'about_page.dart';
 
-class Page1 extends StatelessWidget {
+class Page1 extends StatefulWidget {
   const Page1({super.key});
+
+  @override
+  State<Page1> createState() => _Page1State();
+}
+
+class _Page1State extends State<Page1> {
+  late int _turtleIndex;
+
+  @override
+  void initState() {
+    super.initState();
+    _turtleIndex = Random().nextInt(20) + 1;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +39,7 @@ class Page1 extends StatelessWidget {
           PopupMenuButton<ThemeMode>(
             icon: Icon(
               themeNotifier.themeMode == ThemeMode.system
-                  ? Icons.brightness_auto
+                  ? Icons.settings
                   : (themeNotifier.themeMode == ThemeMode.light 
                       ? Icons.light_mode 
                       : Icons.dark_mode),
@@ -41,7 +54,7 @@ class Page1 extends StatelessWidget {
                 value: ThemeMode.system,
                 child: Row(
                   children: [
-                    Icon(Icons.brightness_auto, size: 18),
+                    Icon(Icons.settings, size: 18),
                     SizedBox(width: 8),
                     Text('System'),
                   ],
@@ -100,60 +113,61 @@ class Page1 extends StatelessWidget {
               onPressed: () {
                 showDialog(
                   context: context,
-                  builder: (BuildContext context) {
-                    return Dialog(
-                      backgroundColor: Theme.of(context).brightness == Brightness.dark ? Colors.black.withValues(alpha: 0.8) : Colors.white.withValues(alpha: 0.8),
-                      child: Container(
-                        padding: EdgeInsets.all(20),
-                        child: Text(
-                        'This is just a simple 101 Flutter Project.\n'
-                        'Built by Martyn & Alvin.\n'
-                        'Enjoy! :)',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black,
-                            fontSize: 14),
-                        ),
+                  builder: (context) => AlertDialog(
+                    title: const Text('Help'),
+                    content: const Text('This is a simple Material 3 app. \n\nClick on the theme icon to switch between light, dark, and system themes. \n\nCheck the Changelog for version history.'),
+                    actions: [
+                      TextButton(
+                        onPressed: () => Navigator.pop(context),
+                        child: const Text('OK'),
                       ),
-                    );
-                  },
+                    ],
+                  ),
                 );
               },
             ),
           ),
         ],
       ),
-      body: 
-      Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Flexible(
-            child: Center(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+      body: Center(
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              const SizedBox(height: 20.0),
+              Container(
+                width: 300.0,
+                height: 300.0,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30.0),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withValues(alpha: 0.2),
+                      spreadRadius: 5,
+                      blurRadius: 10,
+                      offset: const Offset(0, 5),
+                    ),
+                  ],
+                ),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(30.0),
                   child: Image.asset(
-                    'images/turtle_${Random().nextInt(20) + 1}.png',
+                    'images/turtle_$_turtleIndex.png',
                     fit: BoxFit.contain,
                   ),
                 ),
               ),
-            ),
-          ),
-          const SizedBox(height: 20),
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Text(
-              'distortedturtle.dev since 2024',
-              style: TextStyle(
-                color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black,
-                fontFamily: 'Roboto',
-                fontSize: 14.0,
+              const SizedBox(height: 40.0),
+              const Text(
+                'distortedturtle.dev since 2024',
+                style: TextStyle(
+                  fontFamily: 'Roboto',
+                  fontSize: 12.0,
+                ),
               ),
-            ),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }
