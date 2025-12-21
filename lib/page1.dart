@@ -26,7 +26,14 @@ class Page1 extends StatelessWidget {
           Tooltip(
   message: 'Switch Theme',
   child: IconButton(
-            icon: Icon(themeNotifier.themeMode == ThemeMode.light ? Icons.dark_mode : Icons.light_mode, size: 18.0),
+            icon: Icon(
+              themeNotifier.themeMode == ThemeMode.system
+                  ? Icons.brightness_auto
+                  : (themeNotifier.themeMode == ThemeMode.light 
+                      ? Icons.light_mode 
+                      : Icons.dark_mode),
+              size: 18.0,
+            ),
             onPressed: () {
               themeNotifier.toggleTheme();
             },
