@@ -18,48 +18,66 @@ class AboutPage extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: ListView(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-        children: [
-          _AboutSection(
-            title: 'Distorted Turtle',
-            content: 'Distorted Turtle is a creative project born in 2024 as a minimalist exploration of Flutter\'s capabilities. '
-                'It began as a study of Material 3 design principles, focusing on clean aesthetics, dynamic themes, and a seamless user experience. '
-                '\n\nThe project evolved into a gallery of generative AI art, showcasing the intersection of high-tech cyberpunk themes with high-quality digital textures. '
-                'Each turtle image is a unique fusion of robotic complexity and smooth, premium gradients, designed to look stunning on every screen.',
-          ),
-          const SizedBox(height: 24),
-          const Text(
-            'Image Prompts',
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-              fontFamily: 'Roboto',
+      body: CustomScrollView(
+        slivers: [
+          SliverPadding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+            sliver: SliverList(
+              delegate: SliverChildListDelegate([
+                _AboutSection(
+                  title: 'Distorted Turtle',
+                  content: 'Distorted Turtle is a creative project born in 2024 as a minimalist exploration of Flutter\'s capabilities. '
+                      'It began as a study of Material 3 design principles, focusing on clean aesthetics, dynamic themes, and a seamless user experience. '
+                      '\n\nThe project evolved into a gallery of generative AI art, showcasing the intersection of high-tech cyberpunk themes with high-quality digital textures. '
+                      'Each turtle image is a unique fusion of robotic complexity and smooth, premium gradients, designed to look stunning on every screen.',
+                ),
+                _AboutSection(
+                  title: 'Future Vision',
+                  content: 'Currently, Distorted Turtle uses a curated set of pre-generated art to ensure high visual quality. \n\nLooking ahead, I intend to integrate real-time generative capabilities, allowing users to generate their own unique turtle variants directly within the app using cutting-edge AI models.',
+                ),
+                const SizedBox(height: 24),
+                const Text(
+                  'Image Prompts',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'Roboto',
+                  ),
+                ),
+                const SizedBox(height: 8),
+                const Text(
+                  'Copy these prompts to use in tools like Midjourney or DALL-E 3:',
+                  style: TextStyle(fontSize: 13, color: Colors.grey),
+                ),
+                const SizedBox(height: 12),
+                _PromptCard(
+                  title: 'Prompt 1: Balanced Original',
+                  prompt: 'A sleek, distorted cybernetic turtle featuring holographic shells and neon-lit circuitry, blending high-tech cyberpunk aesthetics with the clean, rounded shapes and tonal color palettes of Material 3. The art style combines glitch-tech textures with smooth, premium digital gradients and soft shadows. High resolution, minimalist tech-art background.',
+                ),
+                _PromptCard(
+                  title: 'Prompt 2: Dark Glassmorphism',
+                  prompt: 'A cybernetic turtle with a shell made of translucent glassmorphism layers and intricate neon-purple circuit lighting. Floating Material 3 UI elements and soft-glow effects around the turtle. Cinematic lighting, ultra-dark minimalist background, 8k resolution, tech-noir aesthetic.',
+                ),
+                _PromptCard(
+                  title: 'Prompt 3: Pristine Tech',
+                  prompt: 'High-end product photography of a robotic turtle, premium white ceramic body with gold-plated circuitry and a sky-blue holographic shell. Clean Material 3 design language with soft studio lighting and an ultra-minimalist white-to-grey gradient background. Sleek and futuristic.',
+                ),
+                _PromptCard(
+                  title: 'Prompt 4: Deep Glitch Art',
+                  prompt: 'Abstract digital art of a cyber-turtle with heavy glitch distortion effects. Fragmented holographic shell shards, vibrant Material 3 color palette (vibrant pink, electric blue, and violet). High-tech aesthetic, sharp focus on mechanical details, digital masterpiece.',
+                ),
+              ]),
             ),
           ),
-          const SizedBox(height: 8),
-          const Text(
-            'Copy these prompts to use in tools like Midjourney or DALL-E 3:',
-            style: TextStyle(fontSize: 13, color: Colors.grey),
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                AppFooter(),
+              ],
+            ),
           ),
-          const SizedBox(height: 12),
-          _PromptCard(
-            title: 'Prompt 1: Balanced Original',
-            prompt: 'A sleek, distorted cybernetic turtle featuring holographic shells and neon-lit circuitry, blending high-tech cyberpunk aesthetics with the clean, rounded shapes and tonal color palettes of Material 3. The art style combines glitch-tech textures with smooth, premium digital gradients and soft shadows. High resolution, minimalist tech-art background.',
-          ),
-          _PromptCard(
-            title: 'Prompt 2: Dark Glassmorphism',
-            prompt: 'A cybernetic turtle with a shell made of translucent glassmorphism layers and intricate neon-purple circuit lighting. Floating Material 3 UI elements and soft-glow effects around the turtle. Cinematic lighting, ultra-dark minimalist background, 8k resolution, tech-noir aesthetic.',
-          ),
-          _PromptCard(
-            title: 'Prompt 3: Pristine Tech',
-            prompt: 'High-end product photography of a robotic turtle, premium white ceramic body with gold-plated circuitry and a sky-blue holographic shell. Clean Material 3 design language with soft studio lighting and an ultra-minimalist white-to-grey gradient background. Sleek and futuristic.',
-          ),
-          _PromptCard(
-            title: 'Prompt 4: Deep Glitch Art',
-            prompt: 'Abstract digital art of a cyber-turtle with heavy glitch distortion effects. Fragmented holographic shell shards, vibrant Material 3 color palette (vibrant pink, electric blue, and violet). High-tech aesthetic, sharp focus on mechanical details, digital masterpiece.',
-          ),
-          AppFooter(),
         ],
       ),
     );

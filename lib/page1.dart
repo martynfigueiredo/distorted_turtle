@@ -23,6 +23,16 @@ class _Page1State extends State<Page1> {
     _turtleIndex = Random().nextInt(20) + 1;
   }
 
+  void _refreshTurtle() {
+    setState(() {
+      int newIndex;
+      do {
+        newIndex = Random().nextInt(20) + 1;
+      } while (newIndex == _turtleIndex);
+      _turtleIndex = newIndex;
+    });
+  }
+
   Future<void> _launchUrl(String url) async {
     final Uri uri = Uri.parse(url);
     if (!await launchUrl(uri)) {
@@ -139,7 +149,7 @@ class _Page1State extends State<Page1> {
                   context: context,
                   builder: (context) => AlertDialog(
                     title: const Text('Help'),
-                    content: const Text('This is a simple Material 3 app. \n\nClick on the theme icon to switch between light, dark, and system themes. \n\nCheck the Changelog for version history.'),
+                    content: const Text('This is a simple Material 3 app. \n\nClick on the theme icon to switch between light, dark, and system themes. \n\nClick the refresh button to see a new turtle! \n\nCheck the Changelog for version history.'),
                     actions: [
                       TextButton(
                         onPressed: () => Navigator.pop(context),
@@ -186,6 +196,12 @@ class _Page1State extends State<Page1> {
           const SizedBox(height: 20.0),
           AppFooter(),
         ],
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: _refreshTurtle,
+        icon: const Icon(Icons.refresh),
+        label: const Text('Refresh Art'),
+        backgroundColor: Theme.of(context).colorScheme.primaryContainer,
       ),
     );
   }
