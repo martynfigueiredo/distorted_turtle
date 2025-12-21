@@ -6,6 +6,7 @@
 
 - **Generative AI Art Gallery**: Immerse yourself in a curated collection of 20 unique, high-resolution cybernetic turtle variants. Each piece is a fusion of robotic complexity and ethereal digital textures.
 - **Premium Material 3 Experience**: A clean, professional, and fluid interface built on the latest design principles, ensuring a stunning look on every device.
+- **Interactive Art Refresh**: Instantly swap the center-staged art with a single tap on the "Refresh Art" button.
 - **Adaptive Theming**: Seamlessly switch between **Light**, **Dark**, and **System** modes with an explicit, user-friendly theme selector.
 - **State Persistence**: A robust state management approach ensures your randomly selected turtle remains consistent across theme changes, providing a stable and reliable user experience.
 - **True Cross-Platform**: Optimized for a flawless experience across Web, Android, iOS, and Desktop.

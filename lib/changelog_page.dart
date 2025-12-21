@@ -17,29 +17,43 @@ class ChangelogPage extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: ListView(
-        padding: const EdgeInsets.all(16.0),
-        children: [
-          _ChangelogItem(
-            version: '1.0.1',
-            date: '2025-12-20',
-            changes: [
-              'Added Changelog page.',
-              'Added theme switcher.',
-              'Improved UI with Material 3.',
-              'Added System Theme support with explicit selection.',
-              'Integrated 20 random turtle images with persistence.',
-            ],
+      body: CustomScrollView(
+        slivers: [
+          SliverPadding(
+            padding: const EdgeInsets.all(16.0),
+            sliver: SliverList(
+              delegate: SliverChildListDelegate([
+                const _ChangelogItem(
+                  version: '1.0.1',
+                  date: '2025-12-20',
+                  changes: [
+                    'Added Changelog page.',
+                    'Added theme switcher.',
+                    'Improved UI with Material 3.',
+                    'Added System Theme support with explicit selection.',
+                    'Integrated 20 random turtle images with persistence.',
+                  ],
+                ),
+                const _ChangelogItem(
+                  version: '1.0.0',
+                  date: '2024-01-01',
+                  changes: [
+                    'Initial release of Distorted Turtle.',
+                    'Page 1 implementation.',
+                  ],
+                ),
+              ]),
+            ),
           ),
-          _ChangelogItem(
-            version: '1.0.0',
-            date: '2024-01-01',
-            changes: [
-              'Initial release of Distorted Turtle.',
-              'Page 1 implementation.',
-            ],
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                AppFooter(),
+              ],
+            ),
           ),
-          AppFooter(),
         ],
       ),
     );
