@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 import 'package:provider/provider.dart';
 import 'theme_notifier.dart';
 import 'changelog_page.dart';
@@ -83,7 +84,7 @@ class Page1 extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(30.0),
                   child: Image.asset(
-                    'images/1.png',
+                    'images/turtle_${Random().nextInt(6) + 1}.png',
                     fit: BoxFit.contain,
                   ),
                 ),

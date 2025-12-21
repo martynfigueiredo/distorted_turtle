@@ -69,6 +69,12 @@ flutter:
   assets:
     - icons/turtle.png
     - images/1.png
+    - images/turtle_1.png
+    - images/turtle_2.png
+    - images/turtle_3.png
+    - images/turtle_4.png
+    - images/turtle_5.png
+    - images/turtle_6.png
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
