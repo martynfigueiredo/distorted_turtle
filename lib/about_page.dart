@@ -48,6 +48,40 @@ class AboutPage extends StatelessWidget {
                     label: const Text('Visit GitHub Repository'),
                   ),
                 ),
+                const SizedBox(height: 16),
+                _AboutSection(
+                  title: 'Creators',
+                  content: 'Distorted Turtle was idealized and started by Alvin Pereira and Martyn Figueiredo in 2024.',
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 4.0, vertical: 8.0),
+                  child: Wrap(
+                    spacing: 8.0,
+                    runSpacing: 8.0,
+                    children: [
+                      TextButton.icon(
+                        onPressed: () => _launchUrl('https://github.com/CarPA8974'),
+                        icon: const Icon(Icons.person, size: 16),
+                        label: const Text('Alvin Pereira'),
+                      ),
+                      TextButton.icon(
+                        onPressed: () => _launchUrl('https://alvinpereira.dev'),
+                        icon: const Icon(Icons.language, size: 16),
+                        label: const Text('alvinpereira.dev'),
+                      ),
+                      TextButton.icon(
+                        onPressed: () => _launchUrl('https://github.com/martynfigueiredo'),
+                        icon: const Icon(Icons.person, size: 16),
+                        label: const Text('Martyn Figueiredo'),
+                      ),
+                      TextButton.icon(
+                        onPressed: () => _launchUrl('https://martynfigueiredo.dev'),
+                        icon: const Icon(Icons.language, size: 16),
+                        label: const Text('martynfigueiredo.dev'),
+                      ),
+                    ],
+                  ),
+                ),
                 const SizedBox(height: 24),
                 const Text(
                   'Image Prompts',
