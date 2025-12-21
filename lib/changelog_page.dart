@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'app_footer.dart';
 
 class ChangelogPage extends StatelessWidget {
   const ChangelogPage({super.key});
@@ -18,7 +19,7 @@ class ChangelogPage extends StatelessWidget {
       ),
       body: ListView(
         padding: const EdgeInsets.all(16.0),
-        children: const [
+        children: [
           _ChangelogItem(
             version: '1.0.1',
             date: '2025-12-20',
@@ -26,6 +27,8 @@ class ChangelogPage extends StatelessWidget {
               'Added Changelog page.',
               'Added theme switcher.',
               'Improved UI with Material 3.',
+              'Added System Theme support with explicit selection.',
+              'Integrated 20 random turtle images with persistence.',
             ],
           ),
           _ChangelogItem(
@@ -36,6 +39,7 @@ class ChangelogPage extends StatelessWidget {
               'Page 1 implementation.',
             ],
           ),
+          AppFooter(),
         ],
       ),
     );

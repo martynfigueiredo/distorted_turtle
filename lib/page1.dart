@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'theme_notifier.dart';
 import 'changelog_page.dart';
 import 'about_page.dart';
+import 'app_footer.dart';
 
 class Page1 extends StatefulWidget {
   const Page1({super.key});
@@ -159,18 +160,8 @@ class _Page1State extends State<Page1> {
               ),
             ),
           ),
-          const SizedBox(height: 20),
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Text(
-              'distortedturtle.dev since 2024',
-              style: TextStyle(
-                color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black,
-                fontFamily: 'Roboto',
-                fontSize: 14.0,
-              ),
-            ),
-          ),
+          const SizedBox(height: 20.0),
+          AppFooter(),
         ],
       ),
     );

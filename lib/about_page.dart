@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'app_footer.dart';
 
 class AboutPage extends StatelessWidget {
   const AboutPage({super.key});
@@ -18,29 +19,30 @@ class AboutPage extends StatelessWidget {
         centerTitle: true,
       ),
       body: ListView(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
         children: [
           _AboutSection(
             title: 'Distorted Turtle',
-            content: 'Distorted Turtle is a project born in 2024 as a minimalist Flutter exploration. '
-                'It focuses on clean aesthetics, Material 3 design, and the intersection of '
-                'generative AI art with fluid mobile/web interfaces.',
+            content: 'Distorted Turtle is a creative project born in 2024 as a minimalist exploration of Flutter\'s capabilities. '
+                'It began as a study of Material 3 design principles, focusing on clean aesthetics, dynamic themes, and a seamless user experience. '
+                '\n\nThe project evolved into a gallery of generative AI art, showcasing the intersection of high-tech cyberpunk themes with high-quality digital textures. '
+                'Each turtle image is a unique fusion of robotic complexity and smooth, premium gradients, designed to look stunning on every screen.',
           ),
-          const SizedBox(height: 16),
+          const SizedBox(height: 24),
           const Text(
             'Image Prompts',
             style: TextStyle(
-              fontSize: 22,
+              fontSize: 18,
               fontWeight: FontWeight.bold,
               fontFamily: 'Roboto',
             ),
           ),
-          const SizedBox(height: 12),
+          const SizedBox(height: 8),
           const Text(
-            'Use these prompts in tools like Midjourney or DALL-E 3 to generate more turtle variants:',
-            style: TextStyle(fontSize: 14),
+            'Copy these prompts to use in tools like Midjourney or DALL-E 3:',
+            style: TextStyle(fontSize: 13, color: Colors.grey),
           ),
-          const SizedBox(height: 16),
+          const SizedBox(height: 12),
           _PromptCard(
             title: 'Prompt 1: Balanced Original',
             prompt: 'A sleek, distorted cybernetic turtle featuring holographic shells and neon-lit circuitry, blending high-tech cyberpunk aesthetics with the clean, rounded shapes and tonal color palettes of Material 3. The art style combines glitch-tech textures with smooth, premium digital gradients and soft shadows. High resolution, minimalist tech-art background.',
@@ -57,6 +59,7 @@ class AboutPage extends StatelessWidget {
             title: 'Prompt 4: Deep Glitch Art',
             prompt: 'Abstract digital art of a cyber-turtle with heavy glitch distortion effects. Fragmented holographic shell shards, vibrant Material 3 color palette (vibrant pink, electric blue, and violet). High-tech aesthetic, sharp focus on mechanical details, digital masterpiece.',
           ),
+          AppFooter(),
         ],
       ),
     );
@@ -90,7 +93,10 @@ class _AboutSection extends StatelessWidget {
             const SizedBox(height: 12),
             Text(
               content,
-              style: Theme.of(context).textTheme.bodyMedium?.copyWith(height: 1.5),
+              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                    height: 1.6,
+                    fontSize: 15,
+                  ),
             ),
           ],
         ),
@@ -108,46 +114,37 @@ class _PromptCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: const EdgeInsets.only(bottom: 16.0),
+      margin: const EdgeInsets.only(bottom: 8.0),
       elevation: 0,
-      color: Theme.of(context).colorScheme.surfaceContainerHighest.withValues(alpha: 0.3),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Expanded(
-                  child: Text(
-                    title,
-                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-                  ),
-                ),
-                IconButton(
-                  icon: const Icon(Icons.copy, size: 20),
-                  tooltip: 'Copy Prompt',
-                  onPressed: () {
-                    Clipboard.setData(ClipboardData(text: prompt));
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text('Prompt copied to clipboard!')),
-                    );
-                  },
-                ),
-              ],
-            ),
-            const SizedBox(height: 8),
-            SelectableText(
-              prompt,
-              style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                    fontFamily: 'monospace',
-                    height: 1.4,
-                  ),
-            ),
-          ],
+      color: Theme.of(context).colorScheme.surfaceContainerHighest.withValues(alpha: 0.2),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      child: ExpansionTile(
+        title: Text(
+          title,
+          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
         ),
+        trailing: IconButton(
+          icon: const Icon(Icons.copy, size: 16),
+          tooltip: 'Copy Prompt',
+          onPressed: () {
+            Clipboard.setData(ClipboardData(text: prompt));
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(content: Text('Prompt copied!')),
+            );
+          },
+        ),
+        childrenPadding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+        children: [
+          SelectableText(
+            prompt,
+            style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                  fontFamily: 'monospace',
+                  fontSize: 11,
+                  height: 1.4,
+                  color: Theme.of(context).colorScheme.onSurfaceVariant.withValues(alpha: 0.8),
+                ),
+          ),
+        ],
       ),
     );
   }
