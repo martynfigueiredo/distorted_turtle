@@ -192,15 +192,29 @@ class _Page1State extends State<Page1> {
               ),
             ),
           ),
-          const SizedBox(height: 20.0),
+          const SizedBox(height: 24.0),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24.0),
+            child: ElevatedButton.icon(
+              onPressed: _refreshTurtle,
+              icon: const Icon(Icons.refresh),
+              label: const Text(
+                'Refresh Art',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              style: ElevatedButton.styleFrom(
+                minimumSize: const Size(double.infinity, 56),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                backgroundColor: Theme.of(context).colorScheme.primaryContainer,
+                foregroundColor: Theme.of(context).colorScheme.onPrimaryContainer,
+              ),
+            ),
+          ),
+          const SizedBox(height: 12.0),
           AppFooter(),
         ],
-      ),
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: _refreshTurtle,
-        icon: const Icon(Icons.refresh),
-        label: const Text('Refresh Art'),
-        backgroundColor: Theme.of(context).colorScheme.primaryContainer,
       ),
     );
   }
