@@ -52,8 +52,17 @@ flutter build web
    flutter run
    ```
 
-## 🎨 Creative Credits
-Created in 2024 as a dedicated study of minimalist aesthetics and the intersection of technology and art.
+## 👥 Creators
+
+**Distorted Turtle** was idealized and started by:
+
+- **Alvin Pereira**
+  - GitHub: [@CarPA8974](https://github.com/CarPA8974)
+  - Website: [alvinpereira.dev](https://alvinpereira.dev)
+
+- **Martyn Figueiredo**
+  - GitHub: [@martynfigueiredo](https://github.com/martynfigueiredo)
+  - Website: [martynfigueiredo.dev](https://martynfigueiredo.dev)
 
 ---
 © 2024 [Distorted Turtle Project](https://github.com/martynfigueiredo/distorted_turtle)

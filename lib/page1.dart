@@ -147,6 +147,11 @@ class _Page1State extends State<Page1> {
                           icon: const Icon(Icons.code, size: 16),
                           label: const Text('Source Code on GitHub'),
                         ),
+                        const SizedBox(height: 16),
+                        const Text(
+                          'Created by Alvin Pereira & Martyn Figueiredo',
+                          style: TextStyle(fontSize: 12, fontStyle: FontStyle.italic),
+                        ),
                       ],
                     ),
                     actions: [
