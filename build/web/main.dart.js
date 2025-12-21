@@ -37984,7 +37984,7 @@ A.HM.prototype={
 L(a){var s=null,r=A.apr(a,t.hQ),q=A.fZ("Distorted Turtle",s,A.lK(s,s,A.a3(a).ax.a===B.M?B.k:B.l,s,s,s,s,s,"Roboto",s,s,14,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s),p=A.a3(a).ax.a===B.M?B.k:B.l,o=A.Km(A.q8(s,s,A.ZB(r.a===B.hg?B.Cv:B.Cz,s,s,18),s,s,new A.a3A(r),s,s,s),"Switch Theme"),n=A.Km(A.q8(s,s,B.CD,s,s,new A.a3B(a),s,s,s),"Changelog"),m=A.Km(A.q8(s,s,B.CF,s,s,new A.a3C(a),s,s,s),"About"),l=t.E
 q=A.ajD(A.c([o,n,m,A.Km(A.q8(s,s,A.ZB(B.Cw,A.a3(a).ax.a===B.M?B.k:B.l,s,18),s,s,new A.a3D(a),s,s,s),"Help")],l),B.A,!0,new A.cN(s,s,s,s,s,p,s,s,s),q)
 p=A.ja(30)
-o=B.zQ.ah7(6)
+o=B.zQ.ah7(20)
 p=A.pr(new A.bZ(B.BY,A.anm(p,new A.we(A.aAk(s,s,new A.up("images/turtle_"+(o+1)+".png",s,s)),B.yR,s)),s),s,s)
 return A.akX(q,A.v_(A.c([new A.vS(1,B.Ci,p,s),B.Lk,new A.bZ(B.iq,A.fZ("distortedturtle.dev since 2024",s,A.lK(s,s,A.a3(a).ax.a===B.M?B.k:B.l,s,s,s,s,s,"Roboto",s,s,14,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),s),s)],l),B.aO,B.rq,B.bh))}}
 A.a3A.prototype={

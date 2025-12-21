@@ -97,7 +97,7 @@ class Page1 extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(30.0),
                   child: Image.asset(
-                    'images/turtle_${Random().nextInt(6) + 1}.png',
+                    'images/turtle_${Random().nextInt(20) + 1}.png',
                     fit: BoxFit.contain,
                   ),
                 ),
